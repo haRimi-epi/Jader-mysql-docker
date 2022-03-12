@@ -8,7 +8,7 @@ JADER (Japanese Adverse Drug Event Report) is a database of spontaneous reportin
 
 JADER dataset is composed of four csv files, regarding DEMO table (patient gender, age, weight, etc.), DRUG table (drug name, causality of drug, etc.), REAC table (adverse drug reaction name, outcome, etc.), and HIST table (medical history). There are NOT including standardized classification codes such as MedDRA code, ICD-10 code, ATC code. Data are described in Japanese and the character set of those csv files is [Shift JIS](https://en.wikipedia.org/wiki/Shift_JIS).
 
-Here, we developed docker-compose.yml and other some configulation files for setting MySQL with JADER dataset. 
+Here, I developed docker-compose.yml and other some configulation files for setting MySQL with JADER dataset. 
 
 # how to use it
 ## 1. Download JADER csv files
