@@ -2,6 +2,14 @@
 
 MySQL-Docker for Japanese Adverse Drug Event Report database (UNOFFICIAL)
 
+# What's JADER
+
+JADER (Japanese Adverse Drug Event Report) is a database of spontaneous reporting of adverse frug reactions  in Japan. Anyone can download it from the website of [Pharmaceuticals and Medical Devices Agency (PMDA)](https://www.pmda.go.jp/english/about-pmda/outline/0005.html), which is Japanese regulatory agency, working together with Ministry of Health, Labour and Welfare in Japan.
+
+JADER dataset is composed of four csv files, regarding DEMO table (patient gender, age, weight, etc.), DRUG table (drug name, causality of drug, etc.), REAC table (adverse drug reaction name, outcome, etc.), and HIST table (medical history). There are NOT including standardized classification codes such as MedDRA code, ICD-10 code, ATC code. Data are described in Japanese and the character set of those csv files is [Shift JIS](https://en.wikipedia.org/wiki/Shift_JIS).
+
+Here, we developed docker-compose.yml and other some configulation files for setting MySQL with JADER dataset. 
+
 # how to use it
 ## 1. Download JADER csv files
 - Access [JADER download page](https://www.pmda.go.jp/safety/info-services/drugs/adr-info/suspected-adr/0005.html) on PMDA web site
