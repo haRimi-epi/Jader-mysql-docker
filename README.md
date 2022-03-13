@@ -1,16 +1,24 @@
-# jader_docker
+# Jader-mysql-docker
 
 MySQL-Docker for Japanese Adverse Drug Event Report database (UNOFFICIAL)
 
+
 # What's JADER
 
-JADER (Japanese Adverse Drug Event Report) is a database of spontaneous reporting of adverse frug reactions  in Japan. Anyone can download it from the website of [Pharmaceuticals and Medical Devices Agency (PMDA)](https://www.pmda.go.jp/english/about-pmda/outline/0005.html), which is Japanese regulatory agency, working together with Ministry of Health, Labour and Welfare in Japan.
+JADER (Japanese Adverse Drug Event Report) is a database of spontaneous reporting of adverse drug reactions  in Japan. Anyone can download it from the website of [Pharmaceuticals and Medical Devices Agency (PMDA)](https://www.pmda.go.jp/english/about-pmda/outline/0005.html), which is Japanese regulatory agency, working together with Ministry of Health, Labour and Welfare in Japan.
 
 JADER dataset is composed of four csv files, regarding DEMO table (patient gender, age, weight, etc.), DRUG table (drug name, causality of drug, etc.), REAC table (adverse drug reaction name, outcome, etc.), and HIST table (medical history). There are NOT including standardized classification codes such as MedDRA code, ICD-10 code, ATC code. Data are described in Japanese and the character set of those csv files is [Shift JIS](https://en.wikipedia.org/wiki/Shift_JIS).
 
-Here, I developed docker-compose.yml and other some configulation files for setting MySQL with JADER dataset. 
+
+# What's Jader-mysql-docker
+
+This is a docker-compose.yml and some configulation files for setting MySQL with JADER dataset easily.
+
+Jader-mysql-docker is a third-party tool for JADER. It is NOT developed by PMDA, and bear NO relation with the agency.
+
 
 # how to use it
+
 ## 1. Download JADER csv files
 - Access [JADER download page](https://www.pmda.go.jp/safety/info-services/drugs/adr-info/suspected-adr/0005.html) on PMDA web site
   - only available in Japanese
@@ -33,9 +41,7 @@ $ cd ./Jader-mysql-docker/
 ~~~
 
 ### Replace JADER csv files
-
 - the repository has dummy files of JADER, so please replace them with downloaded and renamed by step 1.
-
 ~~~
 $ ls ./init/jader/
 demo.csv  drug.csv  hist.csv  reac.csv
@@ -47,7 +53,6 @@ $ docker-compose up -d
 ~~~
 
 ### check status
-
 ~~~
 $ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
@@ -55,12 +60,11 @@ cfd6a2ad9081   mysql:latest   "docker-entrypoint.s…"   13 seconds ago   Up 12 
 ~~~
 
 ### :confetti_ball: congratulations!
-
 Now, you can access and handle JADER via Docker-MySQL.
 
 
----
 
+---
 MIT License
 
 Copyright (c) 2022 haRimi-epi @ gmail.com
