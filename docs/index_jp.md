@@ -21,4 +21,4 @@ JADERは以下の4つのcsvファイルで構成されています。
 
 Jader-mysql-dockerは、PMDAのホームページよりダウンロードされたJADERのcsvファイルをDocker-MySQLに取り込んでデータベースを構築するdocker-compose.ymlです。これを用いることで、JADERが取り込まれたMySQLデータベースを容易に構築することができます。
 
-具体的な構築方法は[readne](https://github.com/haRimi-epi/Jader-mysql-docker#jader-mysql-docker)をご覧ください。
+具体的な構築方法は[readme](https://github.com/haRimi-epi/Jader-mysql-docker#jader-mysql-docker)をご覧ください。
