@@ -2,6 +2,7 @@
 
 MySQL-Docker for Japanese Adverse Drug Event Report database (UNOFFICIAL)
 
+日本語の説明は[こちら](index_jp.md)
 
 # What's JADER
 
